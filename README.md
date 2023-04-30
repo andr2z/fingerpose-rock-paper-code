@@ -13,7 +13,7 @@ for making a PoC for "Rock Scissor Code", a gesture keyboard for refactoring cod
 
 Gesture detection works in three steps:
 
- 1. Detect the hands' landmarks inside the video picture
+ 1. Detect the hands landmarks inside the video picture
  2. Estimating the direction and curl of each individual finger
  3. Comparing the result to a set of gesture descriptions
 
