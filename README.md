@@ -22,24 +22,27 @@ Step (1) is performed by MediaPipe Handpose, and Steps (2) and (3) are handled b
 ### Configuration of Gestures and letter output
 
 The following gestures with corresponding numerical codes are used:
-0: Rock ✊
-1: Index Up ☝️
-2: Victory ✌️
-5: Paper ✋
-6: I 🤙
-7: Horns Up 🤘
-8: Diagonal Up Index ☝️
-9: Diagonal Up ✌️
-12: Diagonal Up Paper ✋
-14: Diagonal Up Horns
+
+| Code | Gesture                |
+|------|------------------------|
+| 0    | Rock ✊                 |
+| 1    | Index Vertical Up ☝️   |
+| 2    | Victory Vertical Up ✌️ |
+| 5    | Paper Vertical Up ✋    |
+| 6    | Pinky Vertical Up 🤙   |
+| 7    | Horns Vertical Up 🤘   |
+| 8    | Index Diagonal Up ☝️   |
+| 9    | Victory Diagonal Up ✌️ |
+| 12   | Paper Diagonal Up ✋    |
+| 14   | Horns Diagonal Up  🤘  |
 
 As this is still work in progress, the truth is always in the code:
 [Letter encoding](./dist/index.html) (look at the constant `keyEncoding`)
 
-The idea is to encode letters as progressions of 2 hand gestures.
-For example "☝️✌️" = "A".
-To type the letter finish with "✊".
-If the first gesture was wrong, make the gesture "✊" to erase the "short term memory" of the program and start again with the gesture you wanted to make initially. 
+The idea is to encode letters as progressions of two hand gestures (in the following G1 for "gesture 1" and G2 for "gesture 2).
+For example "☝️✌️" = "A". (G1 = 1, G2 = 2 or (G1, G2) = (1,2))
+To type the letter finish with "✊". The state "no gesture in memory" has (G1, G2) = (-1, -1).
+If the first gesture was wrong, make the gesture "✊" to erase the "short term memory" of the program and start again with the gesture you wanted to make initially.
 
 For debugging, run the code in a terminal and open [Letter encoding](./dist/index.html) in a browser.
 The letters are displayed in the browser developer console, after "typing".
