@@ -19,7 +19,7 @@ Gesture detection works in three steps:
 
 Step (1) is performed by MediaPipe Handpose, and Steps (2) and (3) are handled by this library.
 
-### Configuration of Gestures and letter output
+### Configuration of gestures and letter output
 
 The following gestures with corresponding numerical codes are used:
 
